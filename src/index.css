@@ -4,6 +4,6 @@
 
 
 html, body {
-  
+  background: linear-gradient(to top, #000000 0%, #0a1a3c 100%);
   font-family: 'Inter', sans-serif;
 }
