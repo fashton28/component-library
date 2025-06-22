@@ -9,6 +9,7 @@ function App() {
   const [accent, setAccent] = useState('#FFE9E4');
   const [background, setBackground] = useState('#FFE9E4');
   const [color, setColor] = useState('#000000');
+  const[gray, setGray] = useState("#FFE9E4")
   //general notes --> dynamic colors can be achieved through variable declaration and using the style property.
   const bgGradient = isDark 
   ? `linear-gradient(to top, ${background}, ${accent})`
@@ -24,11 +25,14 @@ function App() {
           </section>
       </header>
       <section className="mb-8">
-          <Colors isDark={isDark} setIsDark={setIsDark}  accent ={accent} setAccent = {setAccent} color={color} setColor = {setColor} background={background} setBackground={setBackground}/>
+          <Colors isDark={isDark} setIsDark={setIsDark}  accent ={accent} setAccent = {setAccent} color={color} setColor = {setColor} background={background} setBackground={setBackground} setGray={setGray}/>
       </section>
 
       <section>
-         <Palete color={color} setColor = {setColor} />
+         <Palete color={color} setColor = {setColor} gray={gray} />
+      </section>
+      <section>
+          
       </section>
     </div>
   )

@@ -1,10 +1,16 @@
 import React from 'react'
 
-export default function Colors({ isDark, setIsDark, accent, setAccent, color, setColor, background, setBackground}) {
+export default function Colors({ isDark, setAccent, color, setColor, setBackground, setGray}) {
     const handleAccentChange = (e) => {
         const newColor = e.target.value;
         setColor(newColor);
         setAccent(newColor);
+        
+    };
+
+    const handleGrayChange = (e) => {
+        const newColor = e.target.value;
+        setGray(newColor)
         
     };
 
@@ -13,6 +19,9 @@ export default function Colors({ isDark, setIsDark, accent, setAccent, color, se
         setBackground(newColor)
         
     };
+
+
+    
 
   return (
     <div>
@@ -40,6 +49,7 @@ export default function Colors({ isDark, setIsDark, accent, setAccent, color, se
                 <div className={`${isDark ? 'bg-zinc-800' : 'bg-white'} flex gap-2 items-center rounded-lg p-2 focus-within:border-2 focus-within:border focus-within:border-blue-500`}>
                     <input
                         id='colorSelector'
+                        onChange={handleGrayChange}
                         type="color"
                         className='w-6 aspect-square rounded-md focus:outline-none focus:ring-0'
                     />
